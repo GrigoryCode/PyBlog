@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for post in posts %}
-    <h2 class="mt-5"><a href="">{{ post.title }}</a></h2>
+    <h2 class="mt-5"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
     <p>{{ post.text|linebreaksbr }}</p>
     <p class="text-muted">опубликовано: {{ post.published_date }}</p>
 {% endfor %}
