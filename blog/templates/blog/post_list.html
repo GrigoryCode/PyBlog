@@ -13,18 +13,18 @@
 </head>
 <body>
 
-<div>
-    <h1><a href="/">Simple Blog</a></h1>
-</div>
-<br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Simple Blog</a>
+    </div>
+</nav>
 
 {% for post in posts %}
-<div>
-    <h3><a href="">{{ post.title }}</a></h3>
+<div class="container">
+    <h4 class="mt-5"><a href="">{{ post.title }}</a></h4>
     <p>{{ post.text|linebreaksbr }}</p>
-    <p>published: {{ post.published_date }}</p>
+    <p class="text-muted">опубликовано: {{ post.published_date }}</p>
 </div>
-<br>
 {% endfor %}
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
